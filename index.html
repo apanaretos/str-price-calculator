@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Fee Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rental Fee Calculator</h1>
+
+    <!-- Toggle between Calculation Modes -->
+    <div class="toggle-section">
+        <label>
+            <input type="radio" name="mode" id="modeListing" onclick="toggleMode()" checked>
+            Calculate Net Price from Listing Price
+        </label>
+        <label>
+            <input type="radio" name="mode" id="modeNet" onclick="toggleMode()">
+            Calculate Listing Price from Desired Net Take-Home
+        </label>
+    </div>
+
+    <!-- Form for Inputs -->
+    <form id="calculatorForm">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label id="mainLabel" for="mainInput">Listing Price:</label></td>
+                    <td><input type="number" id="mainInput" oninput="calculateBooking(); calculateAirbnb();"></td>
+                </tr>
+                <tr>
+                    <td><label for="bookingCommission">Booking.com Commission Rate (%):</label></td>
+                    <td><input type="number" id="bookingCommission" value="15" oninput="calculateBooking();" required></td>
+                </tr>
+                <tr>
+                    <td><label for="environmentalFee">Environmental Fee (€):</label></td>
+                    <td><input type="number" id="environmentalFee" value="1.5" oninput="calculateBooking();" required></td>
+                </tr>
+                <tr>
+                    <td><label for="airbnbCommission">Airbnb Commission Rate (%):</label></td>
+                    <td><input type="number" id="airbnbCommission" value="3.72" oninput="calculateAirbnb();" required></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <h2>Results</h2>
+    <p id="resultBooking"></p>
+    <p id="resultAirbnb"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>

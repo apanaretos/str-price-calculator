@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.toggle-section {
+    margin: 10px 0 20px;
+}
+
+.toggle-section label {
+    margin-right: 10px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
